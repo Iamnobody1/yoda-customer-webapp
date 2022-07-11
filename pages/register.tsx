@@ -6,7 +6,7 @@ const Login = () => {
   const displaynameRef = React.createRef<HTMLInputElement>()
   const usernameRef = React.createRef<HTMLInputElement>()
   const passwordRef = React.createRef<HTMLInputElement>()
-  const avatarRef = React.createRef<HTMLInputElement>()
+  // const avatarRef = React.createRef<HTMLInputElement>()
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault()
     console.log(1)
@@ -15,7 +15,7 @@ const Login = () => {
         displayname: displaynameRef.current?.value,
         username: usernameRef.current?.value,
         password: passwordRef.current?.value,
-        avatar: avatarRef.current?.value,
+        // avatar: avatarRef.current?.value,
       })
       .then((response) => {
         console.log(response)
@@ -85,7 +85,7 @@ const Login = () => {
       disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none"
                 />
               </label>
-              <label className="block">
+              {/* <label className="block">
                 <span className="block text-sm font-medium text-slate-700">Avatar</span>
                 <input
                   ref={avatarRef}
@@ -97,7 +97,7 @@ const Login = () => {
       focus:invalid:ring-red-500 disabled:border-slate-200
       disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none"
                 />
-              </label>
+              </label> */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <input
