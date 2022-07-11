@@ -11,7 +11,7 @@ const Login = () => {
     event.preventDefault()
     console.log(1)
     axios
-      .post<string>('https://localhost:5001/Users', {
+      .post<string>('https://localhost:5001/Registers', {
         displayname: displaynameRef.current?.value,
         username: usernameRef.current?.value,
         password: passwordRef.current?.value,
@@ -42,7 +42,7 @@ const Login = () => {
                 alt="Workflow"
               />
               <h2 className="text-l mt-6 text-center ">
-                Enter your personal details to create account
+                Enter your personal details to create your account
               </h2>
             </div>
             <form className="mt-8 space-y-6" action="#" method="POST">
@@ -50,7 +50,7 @@ const Login = () => {
                 <span className="block text-sm font-medium text-slate-700">Display Name</span>
                 <input
                   ref={displaynameRef}
-                  type="email"
+                  type="text"
                   placeholder="Sample"
                   className=" invalid:text-pinred-600 mt-1 block w-full rounded-full border border-slate-300 bg-white px-3 py-2 text-sm placeholder-slate-400
       placeholder-slate-400 shadow-sm invalid:border-red-500 focus:border-sky-500
@@ -138,7 +138,7 @@ const Login = () => {
               </span>
               <span className="text-sm">
                 <Link href="/login">
-                  <a className="text-indigo-600">Sign in instead</a>
+                  <a className="text-indigo-600">SIGN IN</a>
                 </Link>
               </span>
             </div>
